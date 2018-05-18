@@ -17,6 +17,8 @@ yarn add spain-phone
 
 ## Usage
 
+> Note: Replace the x's with numbers
+
 ### Check if it is a valid phone number
 
 ```js

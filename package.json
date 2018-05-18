@@ -20,6 +20,9 @@
     "nyc": "^11.8.0"
   },
   "keywords": [
+    "validate",
+    "validation",
+    "validator",
     "phone",
     "fixed",
     "mobile",
