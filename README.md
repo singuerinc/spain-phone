@@ -4,7 +4,6 @@
 Spanish phone number validation
 
 :telephone_receiver:
-[https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_de_Espa%C3%B1a](https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_de_Espa%C3%B1a)
 
 ## Installation
 
@@ -64,3 +63,7 @@ isOther('909 xx xx xx');
 // radio-searching
 isOther('940 xx xx xx');
 ```
+
+## Reference
+
+[https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_de_Espa%C3%B1a](https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_de_Espa%C3%B1a)
