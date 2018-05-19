@@ -15,6 +15,10 @@ describe('spain-phone', () => {
       assert.ok(isPhone('907 11 11 11'));
     });
 
+    it('should return false if is longer than 9 chars', () => {
+      assert.ok(!isPhone('907 11 11 11 11 11 11'));
+    });
+
     it('should validate when the first char is a 9', () => {
       assert.ok(isPhone('911 11 11 11'));
     });
