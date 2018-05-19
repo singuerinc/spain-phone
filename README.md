@@ -1,9 +1,7 @@
 [![Build Status](https://travis-ci.org/singuerinc/spain-phone.svg?branch=master)](https://travis-ci.org/singuerinc/spain-phone)
 [![Coverage Status](https://coveralls.io/repos/github/singuerinc/spain-phone/badge.svg?branch=master)](https://coveralls.io/github/singuerinc/spain-phone?branch=master)
 
-Spanish phone number validation
-
-:telephone_receiver:
+:telephone_receiver: Spanish phone number validation
 
 ## Installation
 
@@ -14,6 +12,10 @@ npm i spain-phone
 // yarn
 yarn add spain-phone
 ```
+
+## Demo
+
+[https://happy-mestorf-e79f76.netlify.com/](https://happy-mestorf-e79f76.netlify.com/)
 
 ## Usage
 
@@ -59,11 +61,11 @@ isHighCost('806 xx xx xx'); // => true
 isHighCost('807 xx xx xx'); // => true
 
 // internet access
-isOther('908 xx xx xx');
-isOther('909 xx xx xx');
+isOther('908 xx xx xx'); // => true
+isOther('909 xx xx xx'); // => true
 
 // radio-searching
-isOther('940 xx xx xx');
+isOther('940 xx xx xx'); // => true
 ```
 
 ## Reference
