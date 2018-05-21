@@ -42,6 +42,20 @@ isMobile('6xx xx xx xx'); //=> true
 isMobile('7xx xx xx xx'); //=> true
 ```
 
+### State by code / number
+
+```js
+import { stateByCode, stateByNumber } from 'spain-phone';
+
+stateByCode('956'); // => ['Cádiz', 'Ceuta']
+stateByCode('960'); // => ['Valencia']
+stateByCode('93'); // => ['Barcelona']
+
+stateByNumber('956 26 26 08'); // => ['Cádiz', 'Ceuta']);
+stateByNumber('960 11 11 11'); // => ['Valencia']);
+stateByNumber('934 58 78 60'); // => ['Barcelona']);
+```
+
 ### Others
 
 ```js
