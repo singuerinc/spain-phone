@@ -1,4 +1,4 @@
-const { stateByCode: sbc, stateByNumber: sbn } = require('./state');
+const { statesByCode: sbc, statesByNumber: sbn } = require('./state');
 
 const sanitize = value => {
   return String(value || '')
@@ -14,8 +14,8 @@ const isFreeCall = v => /^(900|800)(\d){6}$/.test(sanitize(v));
 const isLowCost = v => /^(901|902)(\d){6}$/.test(sanitize(v));
 const isHighCost = v => /^(905|907|803|806|807)(\d){6}$/.test(sanitize(v));
 const isOther = v => /^(908|909|940)(\d){6}$/.test(sanitize(v));
-const stateByCode = v => sbc(sanitize(v));
-const stateByNumber = v => (isPhone(v) && sbn(sanitize(v))) || [];
+const statesByCode = v => sbc(sanitize(v));
+const statesByNumber = v => (isPhone(v) && sbn(sanitize(v))) || [];
 
 module.exports = {
   isPhone,
@@ -25,6 +25,6 @@ module.exports = {
   isLowCost,
   isHighCost,
   isOther,
-  stateByCode,
-  stateByNumber
+  statesByCode,
+  statesByNumber
 };

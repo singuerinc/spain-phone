@@ -7,8 +7,8 @@ const {
   isLowCost,
   isHighCost,
   isOther,
-  stateByCode,
-  stateByNumber
+  statesByCode,
+  statesByNumber
 } = require('./index');
 
 describe('spain-phone', () => {
@@ -140,51 +140,51 @@ describe('spain-phone', () => {
     });
   });
 
-  describe('stateByCode', () => {
+  describe('statesByCode', () => {
     it('should return two cities', () => {
-      assert.deepEqual(stateByCode('956'), ['Cádiz', 'Ceuta']);
+      assert.deepEqual(statesByCode('956'), ['Cádiz', 'Ceuta']);
     });
 
     it('should return Valencia', () => {
-      assert.deepEqual(stateByCode('960'), ['Valencia']);
+      assert.deepEqual(statesByCode('960'), ['Valencia']);
     });
 
     it('should return Barcelona', () => {
-      assert.deepEqual(stateByCode('93'), ['Barcelona']);
+      assert.deepEqual(statesByCode('93'), ['Barcelona']);
     });
 
     it('should return Madrid', () => {
-      assert.deepEqual(stateByCode('91'), ['Madrid']);
+      assert.deepEqual(statesByCode('91'), ['Madrid']);
     });
 
     it('should return an empty array when it does not find any match', () => {
-      assert.deepEqual(stateByCode('33'), []);
+      assert.deepEqual(statesByCode('33'), []);
     });
   });
 
-  describe('stateByNumber', () => {
+  describe('statesByNumber', () => {
     it('should return not return cities with partial numbers', () => {
-      assert.deepEqual(stateByNumber('956'), []);
+      assert.deepEqual(statesByNumber('956'), []);
     });
 
     it('should return two cities', () => {
-      assert.deepEqual(stateByNumber('956 26 26 08'), ['Cádiz', 'Ceuta']);
+      assert.deepEqual(statesByNumber('956 26 26 08'), ['Cádiz', 'Ceuta']);
     });
 
     it('should return Valencia', () => {
-      assert.deepEqual(stateByNumber('960 11 11 11'), ['Valencia']);
+      assert.deepEqual(statesByNumber('960 11 11 11'), ['Valencia']);
     });
 
     it('should return Barcelona', () => {
-      assert.deepEqual(stateByNumber('934 58 78 60'), ['Barcelona']);
+      assert.deepEqual(statesByNumber('934 58 78 60'), ['Barcelona']);
     });
 
     it('should return Madrid', () => {
-      assert.deepEqual(stateByNumber('915 91 38 56'), ['Madrid']);
+      assert.deepEqual(statesByNumber('915 91 38 56'), ['Madrid']);
     });
 
     it('should return an empty array when it does not find any match', () => {
-      assert.deepEqual(stateByNumber('333 91 38 56'), []);
+      assert.deepEqual(statesByNumber('333 91 38 56'), []);
     });
   });
 });
