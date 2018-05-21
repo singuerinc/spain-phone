@@ -34,6 +34,7 @@
   "types": "types/index.d.ts",
   "files": [
     "index.js",
+    "state.js",
     "types/index.d.ts"
   ]
 }
