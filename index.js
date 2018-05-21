@@ -15,7 +15,7 @@ const isLowCost = v => /^(901|902)(\d){6}$/.test(sanitize(v));
 const isHighCost = v => /^(905|907|803|806|807)(\d){6}$/.test(sanitize(v));
 const isOther = v => /^(908|909|940)(\d){6}$/.test(sanitize(v));
 const stateByCode = v => sbc(sanitize(v));
-const stateByNumber = v => sbn(sanitize(v));
+const stateByNumber = v => (isPhone(v) && sbn(sanitize(v))) || [];
 
 module.exports = {
   isPhone,

@@ -117,24 +117,25 @@ const states = {
   876: ['Zaragoza']
 };
 
-const stateByCode = code => {
-  return states[code] || [];
-};
+const stateByCode = (states) => (code) => states[code] || [];
 
-const stateByNumber = number => {
-  const substr = v => x => v.substr(0, x);
+const stateByNumber = (ss) => (number) => {
+    const substr = x => v => v.substr(0, x);
+    const substr2 = substr(2);
+    const substr3 = substr(3);
 
-  let result = states[substr(number)(3)];
+    // all states with three code number
+    let result = stateByCode(ss)(substr3(number));
 
-  if (typeof result === 'undefined') {
-    // try Barcelona and Madrid
-    result = states[substr(number)(2)];
-  }
+    if (result.length === 0) {
+      // try Barcelona or Madrid
+      result = stateByCode(ss)(substr2(number));
+    }
 
-  return result || [];
+    return result || [];
 };
 
 module.exports = {
-  stateByCode,
-  stateByNumber
+  stateByCode: stateByCode(states),
+  stateByNumber: stateByNumber(states),
 };

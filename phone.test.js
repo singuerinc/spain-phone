@@ -163,6 +163,10 @@ describe('spain-phone', () => {
   });
 
   describe('stateByNumber', () => {
+    it('should return not return cities with partial numbers', () => {
+      assert.deepEqual(stateByNumber('956'), []);
+    });
+
     it('should return two cities', () => {
       assert.deepEqual(stateByNumber('956 26 26 08'), ['Cádiz', 'Ceuta']);
     });
