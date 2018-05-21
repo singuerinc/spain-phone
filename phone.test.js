@@ -6,7 +6,9 @@ const {
   isFreeCall,
   isLowCost,
   isHighCost,
-  isOther
+  isOther,
+  stateByCode,
+  stateByNumber
 } = require('./index');
 
 describe('spain-phone', () => {
@@ -135,6 +137,50 @@ describe('spain-phone', () => {
     it('should return true if it is not other type of call', () => {
       assert.ok(!isOther('901 11 11 11'));
       assert.ok(!isOther('902 11 11 11'));
+    });
+  });
+
+  describe('stateByCode', () => {
+    it('should return two cities', () => {
+      assert.deepEqual(stateByCode('956'), ['Cádiz', 'Ceuta']);
+    });
+
+    it('should return Valencia', () => {
+      assert.deepEqual(stateByCode('960'), ['Valencia']);
+    });
+
+    it('should return Barcelona', () => {
+      assert.deepEqual(stateByCode('93'), ['Barcelona']);
+    });
+
+    it('should return Madrid', () => {
+      assert.deepEqual(stateByCode('91'), ['Madrid']);
+    });
+
+    it('should return an empty array when it does not find any match', () => {
+      assert.deepEqual(stateByCode('33'), []);
+    });
+  });
+
+  describe('stateByNumber', () => {
+    it('should return two cities', () => {
+      assert.deepEqual(stateByNumber('956 26 26 08'), ['Cádiz', 'Ceuta']);
+    });
+
+    it('should return Valencia', () => {
+      assert.deepEqual(stateByNumber('960 11 11 11'), ['Valencia']);
+    });
+
+    it('should return Barcelona', () => {
+      assert.deepEqual(stateByNumber('934 58 78 60'), ['Barcelona']);
+    });
+
+    it('should return Madrid', () => {
+      assert.deepEqual(stateByNumber('915 91 38 56'), ['Madrid']);
+    });
+
+    it('should return an empty array when it does not find any match', () => {
+      assert.deepEqual(stateByNumber('333 91 38 56'), []);
     });
   });
 });
