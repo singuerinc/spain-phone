@@ -85,3 +85,7 @@ isOther('940 xx xx xx'); // => true
 ## Reference
 
 [https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_de_Espa%C3%B1a](https://es.wikipedia.org/wiki/Anexo:Prefijos_telef%C3%B3nicos_de_Espa%C3%B1a)
+
+## Related
+
+* [better-dni](https://github.com/singuerinc/better-dni) - The fastest Spanish DNI (NIE / NIF) validation
