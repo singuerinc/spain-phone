@@ -15,7 +15,7 @@ yarn add spain-phone
 
 ## Demo
 
-[https://happy-mestorf-e79f76.netlify.com/](https://happy-mestorf-e79f76.netlify.com/)
+[https://spain-phone-demo.netlify.com](https://spain-phone-demo.netlify.com)
 
 ## Usage
 
