@@ -13,7 +13,7 @@
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
     "np": "np",
     "test": "nyc mocha phone.test.js",
-    "release": "NODE_ENV=production yarn build && yarn test && yarn np"
+    "release": "NODE_ENV=production yarn test && yarn np"
   },
   "devDependencies": {
     "coveralls": "^3.0.6",
