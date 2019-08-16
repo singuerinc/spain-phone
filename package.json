@@ -11,13 +11,16 @@
   },
   "scripts": {
     "coveralls": "nyc report --reporter=text-lcov | coveralls",
-    "test": "nyc mocha phone.test.js"
+    "np": "np",
+    "test": "nyc mocha phone.test.js",
+    "release": "NODE_ENV=production yarn build && yarn test && yarn np"
   },
   "devDependencies": {
-    "coveralls": "^3.0.1",
-    "mocha": "^4.0.1",
+    "coveralls": "^3.0.6",
+    "mocha": "^6.2.0",
     "mocha-lcov-reporter": "^1.3.0",
-    "nyc": "^11.8.0"
+    "np": "^5.0.3",
+    "nyc": "^14.1.1"
   },
   "keywords": [
     "validate",
