@@ -1,6 +1,6 @@
 {
   "name": "spain-phone",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "description": "Spanish phone number validation",
   "main": "index.js",
   "license": "MIT",
